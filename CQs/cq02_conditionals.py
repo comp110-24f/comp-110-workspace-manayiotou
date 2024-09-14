@@ -9,8 +9,11 @@ def guess_a_number() -> None:
     print("Your guess was " + str(x))
     if x == secret
         print("You got it!")
-    if x > secret
-        print("Your guess was too high! The secret number is " + str(secret))
-    else 
-        print("Your guess was too low! The secret number is " + str(secret))
-guess_a_number()
+    else:
+        if x > secret
+            print("Your guess was too high! The secret number is " + str(secret))
+        else:
+            print("Your guess was too low! The secret number is " + str(secret))
+
+if __name__ == "__main__":
+    guess_a_number()
