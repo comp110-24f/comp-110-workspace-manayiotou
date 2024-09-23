@@ -10,6 +10,7 @@ def input_word() -> str:
     # making sure word is exactly 5 letters long
     if len(guess) != 5:
         print("Error: Word must contain 5 characters.")  # if condition is true
+        exit()  # exit function after error statement
     print(guess)  # ex02 require guess to be printed back in every scenario
     return guess  # function needs a return statement
 
@@ -19,6 +20,7 @@ def input_letter() -> str:
 
     if len(character) != 1:
         print("Error: Character must be a single character.")
+        exit()
     print(character)
     return character  # function needs a return statement
 
@@ -39,6 +41,9 @@ def contains_char(word: str, letter: str) -> None:
         print("No instances of " + letter + " found in " + word)
 
 
-guess = input_word()
-character = input_letter()
-contains_char(word=guess, letter=character)
+def main() -> None:
+    contains_char(word=input_word(), letter=input_letter())
+
+
+if __name__ == "__main__":
+    main()
