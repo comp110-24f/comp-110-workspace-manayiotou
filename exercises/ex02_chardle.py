@@ -15,13 +15,25 @@ def input_word() -> str:
 
 
 def input_letter() -> str:
-    letter: str = input("Enter a single character: ")
+    character: str = input("Enter a single character: ")
 
-    if len(letter) != 1:
+    if len(character) != 1:
         print("Error: Character must be a single character.")
-    print(letter)
-    return letter  # function needs a return statement
+    print(character)
+    return character  # function needs a return statement
+
+
+def contains_char(word: str, letter: str) -> None:
+    print("Searching for " + letter + " in " + word)
+    index = 0
+    while index <= len(word):
+        if word[index] == letter:  # checking letter in word to see if it matches
+            print(letter + " found at index " + index)
+        else
+            print("No instances of " + letter + " found in " + word)
+        index += 1
 
 
 input_word()
 input_letter()
+contains_char(word=guess, letter=character)
