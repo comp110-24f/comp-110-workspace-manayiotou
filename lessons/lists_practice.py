@@ -47,4 +47,3 @@ def display(int_list: list[int]) -> None:
 
 
 display(int_list=game_points)
-S
