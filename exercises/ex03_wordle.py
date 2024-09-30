@@ -10,3 +10,4 @@ def input_guess(secret_word_length: int) -> str:
         print("That wasn't 5 chars! Try again: ")
     else:
         print(guess)
+        return guess
