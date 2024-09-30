@@ -3,8 +3,12 @@
 __author__ = "730656009"
 
 
-def concat(word1: str, word2: str) -> str:
-    print(word1 + word2)
+def concat(string1: str, string2: str) -> str:
+    return string1 + string2
 
 
-concat(word1="love", word2="you")
+word1: str = "happy"
+word2: str = "tuesday"
+
+if __name__ == "__main__":
+    print(concat(word1, word2))
