@@ -5,16 +5,17 @@ def test_get_first() -> None:
     dog_breeds: list[str] = ["husky", "golden", "poodle", "lab"]
     assert get_first(dog_breeds) == "husky"
 
+
 # desired RV
-def test_remove_first_return_value() -> None
+def test_remove_first_return_value() -> None:
     "remove_Virst should return None."
     dog_breeds: list[str] = ["husky", "golden", "poodle", "lab"]
-    assert remove_first(dog_breeds) == None
+    assert remove_first(dog_breeds) is None
+
 
 # desired behavior
-def test_remove_first_behavior() -> None
+def test_remove_first_behavior() -> None:
     """remove_first should remove first element from list"""
     dog_breeds: list[str] = ["husky", "golden", "poodle", "lab"]
     remove_first(dog_breeds)
-    assert dog_breeds ==["golden", "poodle", "lab"]
-    
+    assert dog_breeds == ["golden", "poodle", "lab"]
