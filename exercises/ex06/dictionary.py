@@ -47,10 +47,10 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     for word in input:
         first_letter = word[0].lower()
 
-    if first_letter not in result:
-        result[first_letter] = []
+        if first_letter not in result:
+            result[first_letter] = []
 
-    result[first_letter].append(word)
+        result[first_letter].append(word)
 
     return result
 
