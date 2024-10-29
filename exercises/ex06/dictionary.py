@@ -3,28 +3,31 @@
 __author__ = "730656009"
 
 
-def insert(input: dict[str, str]) -> dict[str, str]:
+def invert(input: dict[str, str]) -> dict[str, str]:
     """Inverting the keys and values of a list"""
-    invert: dict[str, str] = {}
-    for key, value in input:
-        if value in invert:
+    invert_list: dict[str, str] = {}
+    for key, value in input.items():
+        if value in invert_list:
             raise KeyError("error message of your choice here!")
-        invert[value] = key
-    return invert
+        invert_list[value] = key
+    return invert_list
 
 
 def favorite_color(input: dict[str, str]) -> str:
     """Identifying the most popular color"""
-    count_color = {}
-    for value in input:
-        count_color[value] = count_color.get(value, 0) + 1
+    if not input:  # Check if the dictionary is empty
+        return ""
+    count_color: dict[str, int] = {}
+    for color in input.values():
+        count_color[color] = count_color.get(color, 0) + 1
+
     popular_color = "None"
     max_count = 0
 
-    for value in input:
-        if count_color[value] > max_count:
-            popular_color = value
-            max_count = count_color[value]
+    for color, count in count_color.items():
+        if count > max_count:
+            popular_color = color
+            max_count = count
     return popular_color
 
 
@@ -55,7 +58,7 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     return result
 
 
-def update_attendence(input: dict[str, list[str]], day: str, student: str) -> None:
+def update_attendance(input: dict[str, list[str]], day: str, student: str) -> None:
     """Update the attendance log with the student's attendance for the specified day."""
     if day not in input:
         input[day] = []
