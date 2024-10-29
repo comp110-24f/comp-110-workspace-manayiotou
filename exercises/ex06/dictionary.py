@@ -42,6 +42,7 @@ def count(input: list[str]) -> dict[str, int]:
 
 
 def alphabetizer(input: list[str]) -> dict[str, list[str]]:
+    """alphabetizing items in list based on first letter"""
     result: dict[str, list[str]] = {}
     for word in input:
         first_letter = word[0].lower()
@@ -52,3 +53,11 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
     result[first_letter].append(word)
 
     return result
+
+
+def update_attendence(input: dict[str, list[str]], day: str, student: str) -> None:
+    """Update the attendance log with the student's attendance for the specified day."""
+    if day not in input:
+        input[day] = []
+    if student not in input[day]:
+        input[day].append(student)
