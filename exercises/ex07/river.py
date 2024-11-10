@@ -1,6 +1,6 @@
 """File to define River class."""
 
-from exercises.ex07 import Fish
+from ex07.fish import Fish
 from ex07.bear import Bear
 
 
@@ -36,6 +36,10 @@ class River:
         return None
 
     def view_river(self):
+        print(f"~~~ Day {self.day}: ~~~")
+        print(f"Fish population: {len(self.fish)}")
+        print(f"Bear population: {len(self.bears)}")
+
         return None
 
     def one_river_day(self):
